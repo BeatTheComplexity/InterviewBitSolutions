@@ -3,6 +3,7 @@ package arrays.simulationarray;
 import java.util.ArrayList;
 
 public class SpiralOrderMatrixII {
+
     /*
         Given an integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.
 
@@ -12,11 +13,10 @@ public class SpiralOrderMatrixII {
 
         You should return the following matrix:
          [ [ 1, 2, 3 ], [ 8, 9, 4 ], [ 7, 6, 5 ] ] 
-    */
-    
-    
+     */
+
     public static ArrayList<ArrayList<Integer>> spiralMatrix2(int n) {
-       
+
         int[][] res = new int[n][n];
 
         int top = 0, bottom = n - 1, left = 0, right = n - 1;
@@ -57,24 +57,24 @@ public class SpiralOrderMatrixII {
                     for (int i = bottom; i >= top; i--) {
                         res[i][left] = step++;
                     }
-                    left ++;
+                    left++;
                     dir = 0;
                     break;
 
             }
         }
-        
+
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
-        
+
         for (int i = 0; i < n; i++) {
             ArrayList<Integer> arr = new ArrayList<>(n);
             for (int j = 0; j < n; j++) {
                 arr.add(j, res[i][j]);
             }
-            
+
             result.add(i, arr);
         }
-        
+
         return result;
     }
 }
