@@ -14,7 +14,6 @@ public class SpiralOrderMatrixII {
         You should return the following matrix:
          [ [ 1, 2, 3 ], [ 8, 9, 4 ], [ 7, 6, 5 ] ] 
      */
-
     public static ArrayList<ArrayList<Integer>> spiralMatrix2(int n) {
 
         int[][] res = new int[n][n];
